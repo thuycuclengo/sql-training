@@ -8,7 +8,12 @@
 --GROUP BY price
 --ORDER BY price DESC;\
 
-SELECT city, COUNT(au_id) as authors
-FROM authors
-GROUP BY city
-ORDER BY COUNT(au_id) DESC, city;
+--SELECT city, COUNT(au_id) as authors
+--FROM authors
+--GROUP BY city
+--ORDER BY COUNT(au_id) DESC, city;
+
+SELECT stor_id, AVG(qty) AS average_sale_qty
+FROM sales
+GROUP BY stor_id
+ORDER BY AVG(qty) DESC;
